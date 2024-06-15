@@ -1,0 +1,12 @@
+npm i shadcn
+npm i next-themes
+para los temas puedo hacer un dropdow con system lighe theme y luego ir al sitio de shadcn y traerme los bases 
+
+respectivos a cada estilo y pintar en front segun lo seleccionado en el drop 
+
+si puncho system y tengo un json de system en global asi lo puntara 
+
+para el auto play de caroysel usar estonpm install embla-carousel-autoplay --save
+
+
+aqui esta la doc https://www.embla-carousel.com/get-started/react/

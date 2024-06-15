@@ -50,7 +50,7 @@ function ProductCard(props: Props) {
           {product.attributes.images.data.map((image) => (
             <CarouselItem key={image.id} className="group">
               <Image
-                src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.attributes.url}`}
+                src={`${image.attributes.url}`}
                 width={600}
                 height={600}
                 alt="foto"

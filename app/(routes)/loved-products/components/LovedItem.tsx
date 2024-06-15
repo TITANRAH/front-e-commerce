@@ -30,7 +30,7 @@ function LovedItem(props: Props) {
     <li className="flex ml-3 py-6 border-b">
       <div onClick={() => router.push(`/product/${product.attributes.slug}`)}>
         <Image
-          src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product.attributes.images.data[0].attributes.url}`}
+          src={`${product.attributes.images.data[0].attributes.url}`}
           width={700}
           height={700}
           alt="image product"

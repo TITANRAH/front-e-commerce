@@ -27,7 +27,7 @@ function ChooseCategory() {
               className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded-lg"
             >
               <Image
-                src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${cat.attributes.mainImage.data.attributes.url}`}
+                src={`${cat.attributes.mainImage.data.attributes.url}`}
                 alt={cat.attributes.categoryName}
                 width={300}
                 height={300}

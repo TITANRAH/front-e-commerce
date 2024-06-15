@@ -29,7 +29,7 @@ function CartItem(props: Props) {
         className="cursor-pointer"
       >
         <Image
-          src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product.attributes.images.data[0].attributes.url}`}
+          src={`${product.attributes.images.data[0].attributes.url}`}
           width={500}
           height={500}
           alt="imagen"

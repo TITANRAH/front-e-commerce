@@ -13,9 +13,10 @@ import IconButton from "@/components/IconButton";
 import { Expand, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { formatPrice } from "@/lib/formatPrice";
+import { ProductBySlugDatum } from "@/interfaces/ProductBySlugTypes";
 
 interface Props {
-  product: ProductType;
+  product: ProductBySlugDatum;
 }
 
 function ProductCard(props: Props) {

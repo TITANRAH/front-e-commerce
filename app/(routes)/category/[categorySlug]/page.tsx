@@ -9,6 +9,7 @@ import FiltersControlsCategory from "../components/FiltersControlsCategory";
 import SkeletonSquema from "@/components/SkeletonSquema";
 import ProductCard from "../components/ProductCard";
 import { useState } from "react";
+import { ProductBySlugDatum } from "@/interfaces/ProductBySlugTypes";
 
 function CategorySlug() {
   const params = useParams();
@@ -30,7 +31,7 @@ function CategorySlug() {
       // props hasta el componente de los radio
       filterOrigin == '' 
         ? result 
-        : result.filter((product: ProductType) => product.attributes.origin == filterOrigin)
+        : result.filter((product: ProductBySlugDatum) => product.attributes.origin == filterOrigin)
      )
 
      console.log(filteredProduct.length);
@@ -54,7 +55,7 @@ function CategorySlug() {
 
           {filteredProduct !== null &&
             !loading &&
-            filteredProduct.map((p: ProductType) => <ProductCard key={p.id} product={p} />)}
+            filteredProduct.map((p: ProductBySlugDatum) => <ProductCard key={p.id} product={p} />)}
 
             {filteredProduct !== null && !loading && filteredProduct.length === 0 && (
               <p>No hay productos con este filtro.</p>

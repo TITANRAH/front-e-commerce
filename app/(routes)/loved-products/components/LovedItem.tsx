@@ -9,9 +9,10 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { X } from "lucide-react";
 import TasteOrigin from "@/components/TasteOrigin";
+import { ProductBySlugDatum } from "@/interfaces/ProductBySlugTypes";
 
 interface Props {
-  product: ProductType;
+  product: ProductBySlugDatum;
 }
 
 function LovedItem(props: Props) {

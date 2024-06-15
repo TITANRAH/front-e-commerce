@@ -1,11 +1,12 @@
+import { ProductBySlug, ProductBySlugDatum } from "@/interfaces/ProductBySlugTypes";
 import { ProductType } from "@/interfaces/ProductType";
 import toast from "react-hot-toast";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 interface CartStore {
-  items: ProductType[];
-  addItem: (data: ProductType) => void;
+  items: ProductBySlugDatum[];
+  addItem: (data: ProductBySlugDatum) => void;
   removeItem: (id: number) => void;
   removeAll: () => void;
 }
@@ -14,13 +15,13 @@ export const useCartStore = create(
   persist<CartStore>(
     (set, get) => ({
       items: [],
-      addItem: (data: ProductType) => {
+      addItem: (data: ProductBySlugDatum) => {
 
         console.log(data);
         
         const currentItems = get().items;
         const existingItem = currentItems.find(
-          (item: ProductType) => item.id === data.id
+          (item: ProductBySlugDatum) => item.id === data.id
         );
 
         if (existingItem) {

@@ -13,6 +13,7 @@ import { Expand, ShoppingCart } from "lucide-react";
 import IconButton from "./IconButton";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "@/stores/cart.store";
+import { ProductBySlugDatum } from "@/interfaces/ProductBySlugTypes";
 
 function FeaturedProducts() {
   const router = useRouter();
@@ -39,7 +40,7 @@ function FeaturedProducts() {
 
           
           {result &&
-            result.map((p: ProductType) => {
+            result.map((p: ProductBySlugDatum) => {
               const { attributes, id } = p;
               const { slug, images, productName, taste, origin } = attributes;
 

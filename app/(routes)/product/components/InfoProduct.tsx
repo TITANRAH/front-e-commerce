@@ -12,7 +12,7 @@ import { useProductsLovedStore } from "@/stores/loved.products.store";
 import { Heart } from "lucide-react";
 
 interface Props {
-  product: ProductType;
+  product: ProductBySlugDatum;
 }
 
 function InfoProduct(props: Props) {
@@ -28,10 +28,16 @@ function InfoProduct(props: Props) {
       <div className="justify-between mb-3 sm:flex">
         <h1 className="text-2xl">{product.attributes.productName}</h1>
 
-        <TasteOrigin
-          origin={product.attributes.origin}
-          taste={product.attributes.taste}
-        />
+        <TasteOrigin origin={product.attributes.origin} taste={product.attributes.taste}/>
+        <div className="flex items-center justify-between gap-3">
+          <p className="px-2 py-1 text-xs text-white bg-black rounded-full dark:bg-white dark:text-black w-fit">
+            
+          </p>
+
+          <p className="px-2 py-1 text-xs text-white bg-yellow-900 rounded-full w-fit">
+            {product.attributes.origin}
+          </p>
+        </div>
       </div>
       <Separator className="my-4" />
 

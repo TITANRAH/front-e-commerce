@@ -5,6 +5,7 @@ import React from "react";
 import SkeletonProduct from "../components/SkeletonProduct";
 import CarouselProduct from "../components/CarouselProduct";
 import InfoProduct from "../components/InfoProduct";
+import { ProductBySlugDatum } from "@/interfaces/ProductBySlugTypes";
 
 interface Props {
   searchParams: {
@@ -37,7 +38,7 @@ function ProductSlugPage({ params }: { params: { productSlug: string } }) {
         </div>
 
         <div className="sm:px-12">
-          <InfoProduct product={result.data[0]} />
+          <InfoProduct product={result.data[0] as ProductBySlugDatum} />
         </div>
       </div>
     </div>

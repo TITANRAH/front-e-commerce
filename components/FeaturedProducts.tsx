@@ -14,6 +14,7 @@ import IconButton from "./IconButton";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "@/stores/cart.store";
 import { ProductBySlugDatum } from "@/interfaces/ProductBySlugTypes";
+import TasteOrigin from "./TasteOrigin";
 
 function FeaturedProducts() {
   const router = useRouter();
@@ -79,11 +80,8 @@ function FeaturedProducts() {
 
                       <div className="flex justify-between gap-4 px-8">
                           <h3 className="text-lg font-bold">{productName}</h3>
-                          
-                          <div className="flex items-center justify-between gap-1 "> 
-                              <p className="px-2 py-1 text-white bg-black rounded-full dark:bg-white dark-text-black w-fit">{taste}</p>
-                              <p className="px-2 py-1 text-white bg-yellow-900 rounded-full w-fit">{origin}</p>
-                          </div>
+                                      
+                          <TasteOrigin taste={taste} origin={origin}/>
                       </div>
                     </Card>
                   </div>

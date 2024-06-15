@@ -27,7 +27,13 @@ function ProductSlugPage({ params }: { params: { productSlug: string } }) {
   // console.log(result?.data.attributes.images);
 
   if (result === null) {
-    return <SkeletonProduct />;
+    return (
+      <div className="flex justify-center items-center">
+        <div className="grid grid-cols-1">
+          <SkeletonProduct />
+        </div>
+      </div>
+    );
   }
 
   return (

@@ -39,7 +39,7 @@ function CartPage() {
               </p>
             </div>
             <div className="flex items-center justify-center w-full mt-3">
-              <Button className="w-full" onClick={() => console.log("buy")}>
+              <Button className="w-full dark:bg-black dark:text-white" onClick={() => console.log("buy")}>
                 Comprar
               </Button>
             </div>

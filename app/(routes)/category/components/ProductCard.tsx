@@ -35,8 +35,8 @@ function ProductCard(props: Props) {
         <p className="px-2 py-1 text-xs text-white bg-black rounded-full dark:bg-white dark:text-black w-fit">
           {product.attributes.taste}
         </p>
-        <p className="px-2 py-1 text-xs text-white bg-yellow-900 rounded-full dark:bg-white d w-fit">
-          {product.attributes.taste}
+        <p className="px-2 py-1 text-xs text-white  bg-yellow-900 rounded-full  dark:text-white d w-fit">
+          {product.attributes.origin}
         </p>
       </div>
 
